@@ -8,7 +8,12 @@ def adicionar_livro(titulo, autor, copias):
     print("Livro adicionado com sucesso!")
 
 
-
+def listar_livros():
+    if not biblioteca:
+        print("A biblioteca está vazia.")
+    else:
+        for livro in biblioteca:
+            print(f"Título: {livro['titulo']}, Autor: {livro['autor']}, Cópias: {livro['copias']}")
 
 def emprestar_livro(titulo, usuario):
     for livro in biblioteca:
